@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="BERMANN_GPS_1" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <jar-file>$BERMANN_COMMONS_PATH</jar-file>
+    <jar-file>$SELF_PROJECT_ENTITIES</jar-file>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    <properties>
+        <!-- <property name="eclipselink.canonicalmodel.subpackage" value="onas"/> -->
+        <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+        <property name="javax.persistence.jdbc.url" value="$DB_BERMANN_GPS_1"/>
+        <property name="javax.persistence.jdbc.user" value="$DB_BERMANN_GPS_1_USR"/>
+        <property name="javax.persistence.jdbc.password" value="$DB_BERMANN_GPS_1_PASS"/>
+
+        <!-- Configure default connection pool. -->
+        <property name="eclipselink.connection-pool.default.initial" value="1" />
+        <property name="eclipselink.connection-pool.default.min" value="$DB_BERMANN_GPS_1_POOL_MIN" />
+        <property name="eclipselink.connection-pool.default.max" value="$DB_BERMANN_GPS_1_POOL_MAX" />
+    </properties>
+  </persistence-unit>
+
+  <persistence-unit name="BERMANN_GPS_PUERTO" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <jar-file>$BERMANN_COMMONS_PATH</jar-file>
+    <jar-file>$SELF_PROJECT_ENTITIES</jar-file>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    <properties>
+        <!-- <property name="eclipselink.canonicalmodel.subpackage" value="onas"/> -->
+        <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+        <property name="javax.persistence.jdbc.url" value="$DB_BERMANN_GPS_PUERTO"/>
+        <property name="javax.persistence.jdbc.user" value="$DB_BERMANN_GPS_PUERTO_USR"/>
+        <property name="javax.persistence.jdbc.password" value="$DB_BERMANN_GPS_PUERTO_PASS"/>
+
+        <!-- Configure default connection pool. -->
+        <property name="eclipselink.connection-pool.default.initial" value="1" />
+        <property name="eclipselink.connection-pool.default.min" value="$DB_BERMANN_GPS_PUERTO_POOL_MIN" />
+        <property name="eclipselink.connection-pool.default.max" value="$DB_BERMANN_GPS_PUERTO_POOL_MAX" />
+    </properties>
+  </persistence-unit>
+
+  <persistence-unit name="BERMANN_WS" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <jar-file>$BERMANN_COMMONS_PATH</jar-file>
+    <jar-file>$SELF_PROJECT_ENTITIES</jar-file>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="javax.persistence.jdbc.url" value="$DB_BERMANN_WS"/>
+      <property name="javax.persistence.jdbc.user" value="$DB_BERMANN_WS_USR"/>
+      <property name="javax.persistence.jdbc.password" value="$DB_BERMANN_WS_PASS"/>
+
+      <!-- Configure default connection pool. -->
+      <property name="eclipselink.connection-pool.default.initial" value="1" />
+      <property name="eclipselink.connection-pool.default.min" value="$DB_BERMANN_WS_POOL_MIN" />
+      <property name="eclipselink.connection-pool.default.max" value="$DB_BERMANN_WS_POOL_MAX" />
+    </properties>
+  </persistence-unit>
+</persistence>

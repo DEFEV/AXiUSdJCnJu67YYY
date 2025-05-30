@@ -1,0 +1,11 @@
+/nbproject/private/
+**.class/private
+./bin
+**.jar
+.DS_Store
+!lib/*.jar
+*.class
+*.log
+target
+.code-version
+.env
